@@ -104,6 +104,7 @@ require "plugins/mini-starter-config"
 require "plugins/neoscroll-config"
 require "plugins/memento-config"
 require "plugins/neorg-config"
+require "plugins/neogit-config"
 -- require "plugins/shade-config"
 
 -- Single-line default .setup() 
@@ -113,7 +114,6 @@ require "plugins/neorg-config"
 require("nvim-autopairs").setup()
 -- require('mini.animate').setup()
 require('nvim_comment').setup()
-require('neogit').setup()
 require('colorizer').setup()
 require('nvim-surround').setup()
 
