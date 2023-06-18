@@ -1,18 +1,21 @@
+-- LOCALS
+-- ========================================================================================
 local set = vim.opt
+local api = vim.api
 
 
 -- BASE SETUP
 -- ========================================================================================
-set.number = true -- line numbers
-set.mouse = 'a' -- mouse enabling
-set.ignorecase = true -- ignore case when searching
-set.smartcase = true -- if search term uses uppercase, use it
-set.hlsearch = false -- disable highlighting of previous search
-set.wrap = false -- don't wrap lines
-set.tabstop = 2 -- default is 8, some people like 4... I don't know why.
-set.shiftwidth = 2 -- ^^ see previous line
+set.number = true
+set.mouse = 'a'
+set.ignorecase = true
+set.smartcase = true
+set.hlsearch = false
+set.wrap = false
+set.tabstop = 2
+set.shiftwidth = 2
 set.expandtab = true
-set.termguicolors = true -- colorscheme controlled by /lua/plugins module
+set.termguicolors = true
 set.cursorline = true
 set.clipboard:append { 'unnamed', 'unnamedplus' }
 set.list = true
@@ -27,21 +30,15 @@ set.title = true
 -- ========================================================================================
 vim.g.mapleader = " "
 vim.keymap.set("n", "-", vim.cmd.Ex)
-local api = vim.api
-api.nvim_set_keymap("n", "<leader>zm", ":ZenMode<CR>", {})
+vim.keymap.set("n", "<leader>zm", ":ZenMode<CR>", {})
 
 
 -- PLUGIN MGMT
 -- ========================================================================================
--- plugin manager 
--- lua/lazy-config
-require "lazy-config"
--- plugin manifest, manage plugin config in separate files /lua/plugins/<plugin>-config.lua
--- "lua/pluginfile"
-require "pluginfile"
+require "lazy-config" -- lua/lazy-config.lua
+require "pluginfile"  -- lua/pluginfile.lua
 
 
 -- COLORSCHEME (load after plugins)
--- vim.g.moonlight_contrast = false
--- vim.cmd('colorscheme fluoromachine')
+-- ========================================================================================
 vim.cmd('colorscheme tokyonight-storm')
