@@ -42,5 +42,6 @@ require "pluginfile"
 
 
 -- COLORSCHEME (load after plugins)
-vim.g.moonlight_contrast = false
-vim.cmd('colorscheme fluoromachine')
+-- vim.g.moonlight_contrast = false
+-- vim.cmd('colorscheme fluoromachine')
+vim.cmd('colorscheme tokyonight-storm')
