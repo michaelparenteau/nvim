@@ -53,10 +53,10 @@ require("lazy").setup({
   { "folke/zen-mode.nvim",
     opts = {
       on_open = function(win)
-        vim.cmd(":silent lua require'shade'.toggle()")
+        -- vim.cmd(":silent lua require'shade'.toggle()")
       end,
       on_close = function(win)
-        vim.cmd(":silent lua require'shade'.toggle()")
+        -- vim.cmd(":silent lua require'shade'.toggle()")
       end,
     }
   },
@@ -79,7 +79,7 @@ require("lazy").setup({
   },
   { "kylechui/nvim-surround", version = "*", event = "VeryLazy", },
   { "nvim-neorg/neorg", build = ":Neorg sync-parsers", dependencies = { "nvim-lua/plenary.nvim" }, },
-  { "sunjon/shade.nvim" },
+  -- { "sunjon/shade.nvim" },
 })
 
 -- REQUIRE PLUGIN CONFIG FILES
@@ -104,7 +104,7 @@ require "plugins/mini-starter-config"
 require "plugins/neoscroll-config"
 require "plugins/memento-config"
 require "plugins/neorg-config"
-require "plugins/shade-config"
+-- require "plugins/shade-config"
 
 -- Single-line default .setup() 
 --   or temporary .setup({...}) below
