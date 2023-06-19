@@ -88,7 +88,7 @@ require "plugins/fluoromachine-config"
 require "plugins/catppuccin-config"
 require "plugins/tokyonight-config"
 require "plugins/nightfox-config"
-require "plugins/todo-comments"
+require "plugins/todo-comment"
 
 -- Single-line default .setup() 
 --   or temporary .setup({...}) below
