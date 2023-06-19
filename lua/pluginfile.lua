@@ -16,8 +16,6 @@ require("lazy").setup({
   { "phaazon/hop.nvim", lazy = true, },
   { "onsails/lspkind.nvim" },
   { 'neovim/nvim-lspconfig' },
-  -- { 'jose-elias-alvarez/null-ls.nvim' },
-  -- { 'MunifTanjim/prettier.nvim' },
   { "williamboman/mason.nvim", build = ":MasonUpdate" },
   { "williamboman/mason-lspconfig.nvim" },
   { 'lewis6991/gitsigns.nvim' },
@@ -30,7 +28,6 @@ require("lazy").setup({
   { 'nvim-treesitter/nvim-treesitter' },
   { 'wuelnerdotexe/vim-astro' },
   { "folke/edgy.nvim", event = "VeryLazy", opts = {} },
-  -- { 'huy-hng/anyline.nvim', config = true, event = 'VeryLazy', },
   { "terrortylor/nvim-comment" },
   { "karb94/neoscroll.nvim" },
   { 'hrsh7th/cmp-nvim-lsp' },
@@ -43,16 +40,7 @@ require("lazy").setup({
   { 'hrsh7th/vim-vsnip' },
   { 'echasnovski/mini.nvim', version = false },
   { "folke/twilight.nvim", opts = { } },
-  { "folke/zen-mode.nvim",
-    opts = {
-      on_open = function(win)
-        -- vim.cmd(":silent lua require'shade'.toggle()")
-      end,
-      on_close = function(win)
-        -- vim.cmd(":silent lua require'shade'.toggle()")
-      end,
-    }
-  },
+  { "folke/zen-mode.nvim", opts = { on_open = function(win) end, on_close = function(win) end, } },
   { "folke/twilight.nvim", opts = { } },
   { 'TimUntersberger/neogit', dependencies = 'nvim-lua/plenary.nvim' },
   { 'gaborvecsei/memento.nvim', dependencies = 'nvim-lua/plenary.nvim'},
@@ -72,7 +60,6 @@ require("lazy").setup({
   },
   { "kylechui/nvim-surround", version = "*", event = "VeryLazy", },
   { "nvim-neorg/neorg", build = ":Neorg sync-parsers", dependencies = { "nvim-lua/plenary.nvim" }, },
-  -- { "sunjon/shade.nvim" },
 })
 
 -- REQUIRE PLUGIN CONFIG FILES
@@ -82,8 +69,6 @@ require "plugins/whichkey"
 require "plugins/hop-config"
 require "plugins/telescope-config"
 require "plugins/lspkind-config"
--- require "plugins/null_ls-config"
--- require "plugins/prettier-config"
 require "plugins/gitsigns-config"
 require "plugins/git-config"
 require "plugins/cmp-config"
@@ -102,7 +87,6 @@ require "plugins/fluoromachine-config"
 require "plugins/catppuccin-config"
 require "plugins/tokyonight-config"
 require "plugins/nightfox-config"
--- require "plugins/shade-config"
 
 -- Single-line default .setup() 
 --   or temporary .setup({...}) below
