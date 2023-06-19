@@ -31,9 +31,6 @@ require("tokyonight").setup({
     colors.bg_float = "#080F20"
     colors.bg_sidebar = "#080F20"
     colors.bg_popup = "#080F20"
-    colors.CursorLine = {
-      bg = "#242C48"
-    }
   end,
 
   --- You can override specific highlights to use other groups or a hex color
