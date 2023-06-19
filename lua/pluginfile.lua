@@ -6,17 +6,10 @@ require("lazy").setup({
   { 'shaunsingh/moonlight.nvim' },
   { "sainnhe/gruvbox-material" },
   { 'tiagovla/tokyodark.nvim' },
-  {
-    'maxmx03/fluoromachine.nvim',
-    config = function ()
-      local fm = require 'fluoromachine'
-      fm.setup {
-        glow = true,
-        brightness = 1,
-        theme = 'fluoromachine'
-      }
-    end
-  },
+  { 'maxmx03/fluoromachine.nvim' },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+  { "EdenEast/nightfox.nvim" },
   { 'folke/which-key.nvim', lazy = true },
   { 'nvim-lualine/lualine.nvim' },
   { 'nvim-telescope/telescope.nvim', tag = '0.1.1', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -105,6 +98,10 @@ require "plugins/neoscroll-config"
 require "plugins/memento-config"
 require "plugins/neorg-config"
 require "plugins/neogit-config"
+require "plugins/fluoromachine-config"
+require "plugins/catppuccin-config"
+require "plugins/tokyonight-config"
+require "plugins/nightfox-config"
 -- require "plugins/shade-config"
 
 -- Single-line default .setup() 

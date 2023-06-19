@@ -41,4 +41,13 @@ require "pluginfile"  -- lua/pluginfile.lua
 
 -- COLORSCHEME (load after plugins)
 -- ========================================================================================
+-- vim.cmd('colorscheme [base-16-<theme>]') -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
+-- vim.cmd('colorscheme moonlight')
+-- vim.cmd('colorscheme gruvbox-material')
+-- vim.cmd('colorscheme tokyodark')
+-- vim.cmd('colorscheme catpuccin')
+-- vim.cmd('colorscheme moonfly')
+-- vim.cmd('colorscheme nightfox')
+
 vim.cmd('colorscheme tokyonight-storm')
+vim.cmd('highlight CursorLine guibg=#242C48')
