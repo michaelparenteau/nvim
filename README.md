@@ -11,7 +11,7 @@ like, then here you go.
 
 Starter page when runing basic `nvim` command in shell:
 
-<img width="1292" alt="image" src="https://github.com/michaelparenteau/nvim/assets/146460/21ec84ef-1311-45f9-9279-35a0e64f98cf">
+<img width="1355" alt="image" src="https://github.com/michaelparenteau/nvim/assets/146460/b77299ad-2fb7-4514-bbaa-80e36e02ce56">
 
 I have `m` aliased in my `.zshrc` -- `alias m="nvim -c ':Telescope find_files'"`
 -- so when I open a directory from your shell via `m .`, it launches Neovim in
@@ -21,7 +21,7 @@ The editor has changed over teh years, but my three key alias has not :)
 
 Here is what it looks like to open a project:
 
-<img width="1292" alt="image" src="https://github.com/michaelparenteau/nvim/assets/146460/6797a63e-fefc-45f8-9189-15581134455f">
+<img width="1355" alt="image" src="https://github.com/michaelparenteau/nvim/assets/146460/cd13ec73-9369-4f28-9f02-6030817300cd">
 
 Some notable plugins:
 
