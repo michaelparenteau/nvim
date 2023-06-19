@@ -60,6 +60,7 @@ require("lazy").setup({
   },
   { "kylechui/nvim-surround", version = "*", event = "VeryLazy", },
   { "nvim-neorg/neorg", build = ":Neorg sync-parsers", dependencies = { "nvim-lua/plenary.nvim" }, },
+  { "folke/todo-comments.nvim" },
 })
 
 -- REQUIRE PLUGIN CONFIG FILES
@@ -87,6 +88,7 @@ require "plugins/fluoromachine-config"
 require "plugins/catppuccin-config"
 require "plugins/tokyonight-config"
 require "plugins/nightfox-config"
+require "plugins/todo-comments"
 
 -- Single-line default .setup() 
 --   or temporary .setup({...}) below

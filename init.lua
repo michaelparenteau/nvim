@@ -30,6 +30,7 @@ set.title = true
 -- ========================================================================================
 vim.g.mapleader = " "
 vim.keymap.set("n", "-", vim.cmd.Ex)
+-- TODO: consider moving this key mapping to which-key or where plugin is configured
 vim.keymap.set("n", "<leader>zm", ":ZenMode<CR>", {})
 
 
@@ -38,7 +39,8 @@ vim.keymap.set("n", "<leader>zm", ":ZenMode<CR>", {})
 require "lazy-config" -- lua/lazy-config.lua
 require "pluginfile"  -- lua/pluginfile.lua
 
-
+-- TODO: fix colorscheme to be simpler
+--
 -- COLORSCHEME (load after plugins)
 -- ========================================================================================
 -- vim.cmd('colorscheme [base-16-<theme>]') -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
