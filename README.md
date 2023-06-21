@@ -1,29 +1,32 @@
 # My Neovim config
 
 I am adding this up here so I don't have to start over again.
-I mean.. if I start over again it will be becaus I want to.
+I mean.. if I start over again it should be because I want to.
 
-If you are into hacking around with code editors, and wanna
-check out what my [Neovim](https://neovim.io/) config looks
-like, then here you go.
+If you're into hacking around on code editors, and wanna check
+out what my [Neovim](https://neovim.io/) config looks like,
+then here you go.
 
 ---
 
-Starter page when runing basic `nvim` command in shell:
+Starter page when runing basic `nvim` command with no arguments in a shell:
 
 <img width="1355" alt="image" src="https://github.com/michaelparenteau/nvim/assets/146460/b77299ad-2fb7-4514-bbaa-80e36e02ce56">
 
-I have `m` aliased in my `.zshrc` -- `alias m="nvim -c ':Telescope find_files'"`
--- so when I open a directory from your shell via `m .`, it launches Neovim in
-with [Telescope](https://github.com/folke/telescope.nvim) ready to find a file
-in the project. This is some leftover muscle memory from my Textmate days.
-The editor has changed over teh years, but my three key alias has not :)
+I have `m` aliased in my `.zshrc` to `alias m="nvim -c ':Telescope find_files'"`
+-- so when I open a directory from your shell via `m .`, it launches Neovim
+with [Telescope](https://github.com/folke/telescope.nvim) in focus, ready to
+find a file in the project. I wanted to leverage some long-standing muscle memory
+from my Textmate days. My code editor has changed over teh years, but my three key
+alias has not :)
 
 Here is what it looks like to open a project:
 
 <img width="1355" alt="image" src="https://github.com/michaelparenteau/nvim/assets/146460/cd13ec73-9369-4f28-9f02-6030817300cd">
 
-Some notable plugins:
+> The bus came by and I got on. That's when it all began. - [⚡️💀🌹](https://www.youtube.com/watch?v=ALNh0Hk09l4)
+
+Some notable plugins in this config:
 
 * [Whichkey](https://github.com/liuchengxu/vim-which-key) - interactive
   legend for command keybindings.
@@ -42,12 +45,12 @@ to see what is all in there. Honorable mentons are the
 [zen-mode](https://github.com/folke/zen-mode.nvim) plugin. Plenty of
 other stuff -- load it up and give it a whirl.
 
-Remember - "One man gathers what another man spills."
+"One man gathers what another man spills." - [⚡️💀🌹](https://www.youtube.com/watch?v=z5b_awjAn7s)
 
-You must leave now, take what you need, you think will last. But
-whatever you wish to keep, you better grab it fast. 
+You must leave now, take what you need, you think will last. But whatever you wish to keep,
+you better grab it fast. - [Van covers Dylan](https://www.youtube.com/watch?v=jdb_3H-28dE) 
 
-Have fun. Be kind. 
+Have fun. Be kind.
 
 ---
 
@@ -79,7 +82,7 @@ When you run `nvim`, it will look for a `.config/nvim` directory in your home pa
 an `init.lua` file. There are also setups for using vimscript and other ways... but I stuck
 with lua.
 
-You can create all of the above, but to play with this, let's just clone this repo.
+You can create all of the above from scratch, but let's clone this repo.
 
 If you have no `~/.config/` directory:
 
@@ -120,18 +123,19 @@ files:
 * lazy-config.lua
 * pluginfile.lua
 
-Notice that the `lua/` path is ommitted. When you require, you can require lua files as
-modules without the root of the repo or the `lua` directory.
+Notice that the `lua/` path is ommitted. When you require modules, you can reference lua
+files as modules without the root of the repo or the `lua` directory.
 
 These two files are setup for plugin management.
 
 #### lua/lazy-config.lua
 
-This is a configuration for [Lazy](https://github.com/folke/lazy.nvim) - a Neovim plugin
-manager. There are others you can look into, but I chose this for the user interface.
+This is a configuration file for [Lazy](https://github.com/folke/lazy.nvim) - a Neovim plugin
+manager. There are other plugin managers you can look into, but I chose this for the user
+interface.
 
-Note: when you add a plugin, and required setup.. you need to close the editor and restart
-so Lazy will download/install the plugin. I have not configured auto sourcing, etc. yet.
+Note: when you add a plugin, and its required setup.. you need to close the editor and restart
+Neovim and Lazy will download/install the plugin. I have not configured auto sourcing, etc. yet.
 I will though, because it is annoying when spending a bunch of time hacking on this in one
 session.
 
@@ -139,17 +143,21 @@ session.
 
 This file is a plugin manifest, similar to how one might manage a package.json file or Gemfile.
 Other than the `init.lua` file, this is where I spent a lot of time gardening, experimenting,
-etc. I have up top added all the plugins individually and then where there is more than a
-single line `require('<plugin-name>').setup()`, I have created modules inside the
-`/lua/plugins/` folder and followed a `<plugin-name>-config.lua` naming convention. Each
-plugin has some configuration that you can change, to however you like in these files.
+etc. All the plugins listed in the to of this file have been individually added. They all need
+a `.setup()` call to run. When there is more than a single line `require('<plugin-name>').setup()` call,
+I have created modules inside the `/lua/plugins/` folder and followed a `<plugin-name>-config.lua` naming
+convention. Each plugin has some configuration that you can change, to however you like in these files.
 
-After this setup, there are some single line default setups for some plugins and I might also
+After this setup, there are some single line default setups for some plugins and I might also,
 when exploring a new plugin, do a larger configuration inline on the bottom of this file until 
 I am convinced I want to keep it for a while and then will move it to a module in the `/plugins/` 
 folder and require it above.
 
 This is not *the* way.. just what I did to try and keep things tidy.
+
+Note: all the plugins listed in the file are named as `<github-username/repo-name>`. This makes research /
+finding docs super convenient. Someone shoudl write a plugin to command-click these because you can copy
+all the strings and paste after github.com/ to find their READMEs.
 
 ### Suggestion for a beginner's journey starting with this config.
 
@@ -163,4 +171,5 @@ Then I would uncomment out plugins one-by-one and explore each of their function
 how they work, if you like them, search out comparisons and figure out what you dig for your
 own config. This is my favorite part about all this. You can make the editor however you like.
 
-Hope you find this fun.
+Hope you find this fun. [🕺](https://youtu.be/8lCMUkqpI7o)
+
