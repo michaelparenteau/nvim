@@ -13,6 +13,8 @@ Starter page when runing basic `nvim` command with no arguments in a shell:
 
 <img width="1355" alt="image" src="https://github.com/michaelparenteau/nvim/assets/146460/b77299ad-2fb7-4514-bbaa-80e36e02ce56">
 
+> The bus came by and I got on. That's when it all began. - [⚡️💀🌹](https://www.youtube.com/watch?v=ALNh0Hk09l4)
+
 I have `m` aliased in my `.zshrc` to `alias m="nvim -c ':Telescope find_files'"`
 -- so when I open a directory from your shell via `m .`, it launches Neovim
 with [Telescope](https://github.com/folke/telescope.nvim) in focus, ready to
@@ -23,8 +25,6 @@ alias has not :)
 Here is what it looks like to open a project:
 
 <img width="1355" alt="image" src="https://github.com/michaelparenteau/nvim/assets/146460/cd13ec73-9369-4f28-9f02-6030817300cd">
-
-> The bus came by and I got on. That's when it all began. - [⚡️💀🌹](https://www.youtube.com/watch?v=ALNh0Hk09l4)
 
 Some notable plugins in this config:
 
