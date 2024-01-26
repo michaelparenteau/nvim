@@ -86,7 +86,7 @@ local mappings = {
   ["q"] = { "<cmd>wqall!<CR>", "WriteQuitAll!" }, -- Quit Neovim after saving the file
   ["w"] = { "<cmd>w!<CR>", "Save!" }, -- Save current file
   ["l"] = { "<cmd>Lazy<CR>", "Lazy (manage plugins)" }, -- Invoking plugin manager
-  ["["] = { "<cmd>NeoTreeShowToggle<cr>", "Happy Little Tree" }, -- Invoking plugin manager
+  ["["] = { "<cmd>Neotree toggle<cr>", "Happy Little Tree" }, -- Invoking plugin manager
   --
   -- TELESCOPE: note that all the following keymappings work as <Leader>t[key]
   ["T"] = {
